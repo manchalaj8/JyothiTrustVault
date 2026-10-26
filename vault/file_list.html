@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TrustVault - Uploaded Files</title>
+</head>
+<body>
+    <h1>TrustVault</h1>
+    <h2>Your Uploaded Files</h2>
+    
+    <ul>
+        {% for file in files %}
+            <li>{{ file }}</li>
+        {% empty %}
+            <li>No files uploaded yet.</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/upload/">Upload New File</a>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>TrustVault - Files</title>
+</head>
+<body>
+    <h1>TrustVault</h1>
+    <h2>Your Uploaded Files</h2>
+
+    <ul>
+        {% for file in files %}
+            <li>{{ file }}</li>
+        {% empty %}
+            <li>No files uploaded yet.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/upload/">Upload Another File</a>
+</body>
+</html>
